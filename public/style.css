@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 40px; }
+.container { background: white; padding: 25px; border-radius: 8px; width: 450px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px; }
+input, button { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+button { cursor: pointer; font-weight: bold; }
+#student-form button { background: #28a745; color: white; border: none; }
+ul { list-style: none; padding: 0; }
+li { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #eee; }
+.edit-btn { background: #ffc107; border: none; margin-right: 5px; border-radius: 3px; padding: 4px 8px; }
+.delete-btn { background: #dc3545; color: white; border: none; border-radius: 3px; padding: 4px 8px; }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registry (CRUD)</h1>
+        
+        <form id="student-form">
+            <h3>Add New Student</h3>
+            <input type="text" id="name" placeholder="Student Name" required>
+            <input type="text" id="major" placeholder="Major" required>
+            <button type="submit">Add Student</button>
+        </form>
+
+        <h2>Active Student Directory</h2>
+        <ul id="student-list"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
