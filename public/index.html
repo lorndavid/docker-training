@@ -3,23 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student CRUD Management</title>
+    <title>Modern Student Registry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Student Registry (CRUD)</h1>
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Student Registry</h1>
+            <p>Manage your student directory</p>
+        </header>
         
-        <form id="student-form">
+        <form id="student-form" class="card">
             <h3>Add New Student</h3>
-            <input type="text" id="name" placeholder="Student Name" required>
-            <input type="text" id="major" placeholder="Major" required>
-            <button type="submit">Add Student</button>
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Student Name" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="major" placeholder="Major" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Student</button>
         </form>
 
-        <h2>Active Student Directory</h2>
-        <ul id="student-list"></ul>
+        <section class="directory-section">
+            <h2>Active Directory</h2>
+            <ul id="student-list" class="student-list">
+                </ul>
+        </section>
+    </main>
+
+    <div id="edit-modal" class="modal-overlay hidden">
+        <div class="modal-content card">
+            <h3>Update Major</h3>
+            <p id="edit-student-name" class="text-muted"></p>
+            <input type="hidden" id="edit-student-id">
+            
+            <div class="input-group">
+                <input type="text" id="edit-major-input" placeholder="Enter new major" required>
+            </div>
+            
+            <div class="modal-actions">
+                <button type="button" id="cancel-edit" class="btn btn-secondary">Cancel</button>
+                <button type="button" id="save-edit" class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
